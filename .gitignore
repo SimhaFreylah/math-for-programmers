@@ -1,0 +1,21 @@
+
+# Виртуальные окружения Python
+.venv/
+.venv313/
+venv/
+
+# Кэш Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Настройки редактора
+.idea/
+
+# Собранный сайт Zensical
+site/
+
+# Локальные настройки и секреты
+.env
+.env.*
+

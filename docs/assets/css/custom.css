@@ -1,0 +1,71 @@
+/* Общая ширина страницы */
+.md-grid {
+  max-width: 1440px;
+}
+
+/* Общие карточки */
+.math-card,
+.math-demo {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 14px;
+  padding: 22px;
+  margin: 20px 0;
+  background: var(--md-code-bg-color);
+}
+
+.math-card__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.65;
+}
+
+.math-demo__fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 14px;
+}
+
+.math-demo label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 0.82rem;
+}
+
+.math-demo input {
+  width: 100%;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 11px 13px;
+  font: inherit;
+}
+
+.math-demo button {
+  margin: 15px 0;
+  padding: 11px 18px;
+  border-radius: 8px;
+  background: #4d7eff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.math-demo button:hover {
+  background: #3866e7;
+}
+
+.math-demo output {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.math-demo input:focus-visible,
+.math-demo button:focus-visible {
+  outline: 2px solid #8db6ff;
+  outline-offset: 3px;
+}

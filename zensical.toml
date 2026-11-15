@@ -1,0 +1,62 @@
+# Math for Programmers — initial Zensical configuration
+[project]
+site_name = "Математика для программистов"
+site_description = "Изучаем математику и реализуем её на Python"
+docs_dir = "docs"
+site_dir = "site"
+nav = [
+  { "Главная" = "index.md" },
+  { "I. Арифметика" = [
+    "01-arithmetic/index.md",
+    { "1. Натуральные числа" = "01-arithmetic/01-natural-numbers.md" },
+    { "2. Чётные и нечётные числа" = "01-arithmetic/01-02-even-odd-numbers.md" },
+    { "3. Рациональные и иррациональные числа" = "01-arithmetic/01-03-rational-irrational-numbers.md" },
+    { "4. Вещественные и комплексные числа" = "01-arithmetic/01-04-real-complex-numbers.md" },
+    { "5. Числовая прямая и сравнение чисел" = "01-arithmetic/01-05-number-line-comparisons.md" },
+    { "6. Противоположные числа и модуль числа" = "01-arithmetic/01-06-opposite-absolute-value.md" },
+
+  ] },
+  { "II. Системы счисления" = "02-number-systems/index.md" },
+  { "III. Алгебра" = "03-algebra/index.md" },
+]
+extra_css = [
+  "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css",
+  "assets/css/custom.css",
+]
+extra_javascript = [
+  "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js",
+  "https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/contrib/auto-render.min.js",
+  "assets/js/katex-init.js",
+  "assets/js/math-widgets.js",
+]
+
+[project.markdown_extensions]
+admonition = {}
+pymdownx.details = {}
+pymdownx.superfences = {}
+pymdownx.arithmatex.generic = true
+
+[project.theme]
+language = "ru"
+features = [
+  "navigation.sections",
+  "navigation.indexes",
+  "navigation.path",
+  "toc.follow",
+  "navigation.top",
+]
+
+# Dark mode is the default; users can switch to the light palette.
+[[project.theme.palette]]
+scheme = "slate"
+primary = "indigo"
+accent = "blue"
+toggle.icon = "lucide/moon"
+toggle.name = "Светлая тема"
+
+[[project.theme.palette]]
+scheme = "default"
+primary = "indigo"
+accent = "blue"
+toggle.icon = "lucide/sun"
+toggle.name = "Тёмная тема"
